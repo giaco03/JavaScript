@@ -51,14 +51,14 @@ function esempio11() {
 }
 
 function esempio12() {
-    var nome = "Matteo";
+    var nome = "Giacomo";
     var nome;
     document.getElementById("esempio12").innerHTML = nome + " -- Ridichiarazione variabile!";
 }
 
 function esempio13() {
-    var x = "Giacomo" + 5 + 6;
-    var y = 5 + 6 + "Giacomo";
+    var x = "Giacomo " + 5 + " " + 6;
+    var y = 5 + " " + 6 + " Giacomo";
     document.getElementById("esempio13").innerHTML = x + "<br>" + y + "<br>A seconda dell'ordine in cui sommo numeri e stringhe, la risultante sarà diversa!";
 }
 
@@ -78,7 +78,7 @@ function esempio15() {
         let y = 5;
     }
     document.write(x);
-    document.write("<br>Guardando la console, si puo notare come sia stato lanciato un errore riguardo a \"y\". Termina l'esecuzione del codice dopo!");
+    document.write("<br>Guardando la console, si puo notare come sia stato lanciato un errore riguardo a \"y\". Successivamente termina l'esecuzione");
     document.write(y);
 }
 
@@ -93,12 +93,12 @@ function esempio16() {
 function esempio17() {
     var i = 20;
     for (var i = 0; i < 10; i++) {}
-    document.getElementById("esempio17").innerHTML = i + " -- Usando la parola chiave \"var\" dentro ai cicli, se lo stesso nome era già stato usato, il valore finale sarà cambiato (x inizializzata a 20)!" +
+    document.getElementById("esempio17").innerHTML = i + " -- Usando la parola chiave \"var\" dentro ai cicli, se lo stesso nome era già stato usato, il valore finale sarà cambiato (i inizializzata a 0)!" +
         "<br> Usando la parola chiave \"let\" si risolve questo problema.";
 }
 
 function esempio18() {
-    nome = "Matteo";
+    nome = "Giacomo";
     document.getElementById("esempio18").innerHTML = nome + " -- Hoisting, posso usare le variabili prima di averle dichiarate solo se utilizzo la parola \"var\", altrimenti verrà lanciato un Reference Error!";
     var nome;
 }
