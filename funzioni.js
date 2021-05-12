@@ -8,10 +8,10 @@ function esempio2(){
 }
 //Esempio 3
 function esempio3(){
-    document.write("Esempio 3!");
+    document.write = ("Ciao sono l'esempio 3!");
 }
 function esempio4() {
-    document.write("Esempio 4!");
+    document.write ("Esempio 4 -> (5+6)");
 }
 
 //Esempio 5
@@ -77,9 +77,9 @@ function esempio15() {
         }
         let y = 5;
     }
-    document.write(x);
-    document.write("<br>Guardando la console, si puo notare come sia stato lanciato un errore riguardo a \"y\". Successivamente termina l'esecuzione");
-    document.write(y);
+    document.getElementById("esempio15").innerHTML = x ;
+    document.getElementById("esempio15").innerHTML +="<br>Guardando la console, si puo notare come sia stato lanciato un errore riguardo a \"y\". Successivamente termina l'esecuzione";
+    document.getElementById("esempio15").innerHTML += y;
 }
 
 function esempio16() {
@@ -124,10 +124,12 @@ function esempio20() {
 }
 
 function esempio21() {
-    const persona = { nome: "Giacomo", cognome: "Volpini", eta: 17 };
-    document.getElementById("esempio21").innerHTML = persona.nome + " " + persona.cognome + " " + persona.eta + " -- Posso Cambiare il valore degli attributi di un oggetto costante<br>";
+    const persona = { nome: "Giacomo", cognome: "Volpini", eta: 17 , altezza : 178 , scuola : "ITIS Tullio Buzzi" };
+    document.getElementById("esempio21").innerHTML = persona.nome + " " + persona.cognome + "<br>Anni : " + persona.eta + "<br>Altezza : "+ persona.altezza+"<brScuola : "+persona.scuola+
+    "<br> -- Posso assegnare attributi ad un oggetto costante<br>";
     persona.eta = 18;
-    document.getElementById("esempio21").append(persona.nome + " " + persona.cognome + " " + persona.eta + " -- Non posso però cambiare l'oggetto a cui la costate fa riferimento!");
+    persona.weight = "67";
+    document.getElementById("esempio21").append(persona.nome + " " + persona.cognome + " - Anni: " + persona.eta +" - Peso: "+persona.weight+ " -- Posso modificare le proprietà dell'oggetto e addirittura aggiungerne ma non riassegnarle !");
 }
 
 function esempio22() {
@@ -135,4 +137,54 @@ function esempio22() {
     cars[0] = "Toyota";
     cars.push("Audi");
     document.getElementById("esempio22").innerHTML = cars + "<br>Ovviamente avendo dichiarato l'array come costante, non posso cambiarlo con uno della stessa lunghezza, ma posso comunque aggiungerci elementi con il metodo .push()!«";
+}
+
+function esempio23() {
+    var car;
+    var number = 5
+    document.getElementById("esempio23").innerHTML = car + "<br />" +
+    typeof car +"<br>"+number +" - tipo -> "+ typeof number;
+}
+
+function esempio24() {
+    document.getElementById("esempio24").innerHTML = typeof undefined + "<br />" +
+    typeof null + "<hr />" +
+    (null === undefined) + //ugual valore e stesso tipo
+    "<br>" +
+    (null == undefined);
+}
+
+function esempio25(){
+    document.getElementById("esempio25").innerHTML = "Ci sono 4 tipi di dati primitivi :<br>String, number, boolean e undefined<br"+
+    "<br>Ci sono tipo complessi come object e function che sono restituiti per oggetti,array e null oppure funzioni"+
+    "<br>Le funzioni sono blocchi di codice che prendono in input dei parametri e restituendo un valore di return in output"+
+    "<br>Possono essere invocate dal loro nome e le variabili dichiarate all'interno di funzioni diventano locali";
+}
+
+function esempio26() {
+    document.getElementById("esempio26").innerHTML = "Gli oggetti sono contenitori di dati dotati di proprietà e metodi."+
+    "<br>I metodi sono funzioni memorizzate come proprietà e possono essere chiamate con nomeOggetto.nomeMetodo()"+
+    "<br>La keyword this si riferisce al proprietario della funzione"+
+    "<br>La parola new dichiara un oggetto e lo crea ma è sconsigliata per i tipi primitivi perchè lento";
+}
+
+function esempio27() {
+    document.getElementById("esempio27").innerHTML = "Gli eventi sono cose che accadono agli elementi e JS ci aiuta a reagire a questi eventi"+
+    "<br>Esempi comuni sono gli eventi generati dall'utente come onclick e onchange"+
+    "<br>Gli event handler possono essere utilizzati per gestire e verificare <br>l'input dell'utente, le azioni dell'utente e le azioni del browser:";
+}
+
+function esempio28() {
+    document.getElementById("esempio28").innerHTML = "Le stringhe sono composte da più caratteri scritti tra virgolette <br>e servono per memorizzare e manipolare il testo."
+    +"<br>Le stringhe sono valori primitivi ma possono essere usate come oggetti attraverso new"+
+    "<br>Se confrontiamo però due stringhe (una creata con new  e l'altra letteralmente)"+
+    "<br>con l'operatore === avremo come output false perchè saranno di tipi diversi"+
+    "<br>Nelle stringhe abbiamo come carattere di uscita il \\ che trasforma i caratteri speciali in stringa";
+}
+
+function esempio29() {
+    document.getElementById("esempio29").innerHTML = "Le stringhe sono immutabili: non possono essere cambiate ma solo sostituite"+
+    "<br>Fra i metodi delle stringhe abbiamo:<br>lenght che restituisce la lunghezza della stringa,<br>indexOf() che restituisce l'indice del primo elemento cercato,"+
+    "<br>lastIndexOf() restituisce l'indice dell'ultimo elemento cercato,<br>search() cerca una regex e restituisce la posizione alla prima corrispondenza."+
+    "<br>Il metodo slice() invece restituisce una parte di stringa da una pos iniziale e una finale non inclusa.";
 }

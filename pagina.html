@@ -3,10 +3,40 @@
 <html>  
     <head >  
         <meta charset = "UTF-8">
-        <title>JavaScript Slides</title>
+        <title>JavaScript Tutorial</title>
     </head>  
     <body>  
-        <h1>Cosa ho imparato da JavaScript</h1>
+        <style>
+            header{
+                position: sticky;
+                top:0;
+                padding:40px;
+                background: transparent;
+                text-align: center;
+                }
+                
+                content > div {
+                height: 50px;
+                }
+                div {
+                    border: 2px solid #ddd;
+                    margin-top: -1px; /* Prevent double borders */
+                    background-color: transparent;
+                    padding: 12px;
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: black;
+                    display: block
+                }
+        </style>    
+        <header>
+            <div class="boxed">
+            <font size="+2">
+                <b>Javascript Slides</b>
+            </font>
+            </div>
+        </header>
+        <content>
         <h2>Slide 1: Alerts</h2>
         <button onclick = "esempio1()">Slide 1</button>
 
@@ -14,12 +44,12 @@
         <button onclick = "esempio2()">Slide 2</button><br>
         <a id="testo1"></a>
 
-        <h2>Slide 3: write</h2>
+        <h2>Slide 3: Write</h2>
         <button onclick = "esempio3()">Slide 3</button><br>
 
-        <h2>Slide 4: write</h2>
+        <h2>Slide 4: Write</h2>
         <button onclick = "esempio4()">Slide 4</button><br>
-
+        
         <h2>Slide 5: Document alert</h2>
         <button onclick = "esempio5()">Slide 5</button><br>
 
@@ -59,6 +89,7 @@
 
         <h2>Slide 15: Let and Var</h2>
         <button onclick = "esempio15()">Slide 15</button><br>
+        <a id="esempio15"></a>
 
         <h2>Slide 16: Keywords</h2>
         <button onclick = "esempio16()">Slide 16</button><br>
@@ -87,7 +118,36 @@
         <h2>Slide 22: Array in JS</h2>
         <button onclick = "esempio22()">Slide 22</button><br>
         <a id="esempio22"></a>
-    
+
+        <h2>Slide 23: TypeOf and undefined</h2>
+        <button onclick = "esempio23()">Slide 23</button><br>
+        <a id="esempio23"></a>
+
+        <h2>Slide 24: Null and undefined</h2>
+        <button onclick = "esempio24()">Slide 24</button><br>
+        <a id="esempio24"></a>
+
+        <h2>Slide 25: Objects and Types</h2>
+        <button onclick = "esempio25()">Slide 25</button><br>
+        <a id="esempio25"></a>
+
+        <h2>Slide 26: Objects</h2>
+        <button onclick = "esempio26()">Slide 26</button><br>
+        <a id="esempio26"></a>
+        
+        <h2>Slide 27: Events</h2>
+        <button onclick = "esempio27()">Slide 27</button><br>
+        <a id="esempio27"></a>
+
+        <h2>Slide 28: Strings</h2>
+        <button onclick = "esempio28()">Slide 28</button><br>
+        <a id="esempio28"></a>
+
+        <h2>Slide 29: Strings and methods</h2>
+        <button onclick = "esempio29()">Slide 29</button><br>
+        <a id="esempio29"></a>
+
+        </content>
         <script type = "text/javascript" src="funzioni.js"></script>  
     </body>  
 </html>  
