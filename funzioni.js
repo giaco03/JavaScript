@@ -8,10 +8,10 @@ function esempio2(){
 }
 //Esempio 3
 function esempio3(){
-    document.write = ("Ciao sono l'esempio 3!");
+    document.write("Ciao sono l'esempio 3!");
 }
 function esempio4() {
-    document.write ("Esempio 4 -> (5+6)");
+    document.write("Esempio 4 -> (5+6)");
 }
 
 //Esempio 5
@@ -47,13 +47,13 @@ function esempio10() {
 
 function esempio11() {
     var undefined;
-    document.getElementById("esempio11").innerHTML = undefined + " -- L'output è questo perché non ho assegnato nulla alla variabile!";
+    document.getElementById("esempio11").innerHTML = undefined + " L'output è questo perché non ho assegnato nulla alla variabile!";
 }
 
 function esempio12() {
     var nome = "Giacomo";
     var nome;
-    document.getElementById("esempio12").innerHTML = nome + " -- Ridichiarazione variabile!";
+    document.getElementById("esempio12").innerHTML = nome + " Ridichiarazione variabile!";
 }
 
 function esempio13() {
@@ -86,20 +86,20 @@ function esempio16() {
     var x = 10; {
         let x = 2;
     }
-    document.getElementById("esempio16").innerHTML = x + " -- Il suo valore rimane invariato perché nel blocco ho ridichiarato \"x\" con la parola let. Se avessi usato var, il suo valore sarebbe cambiato!" +
+    document.getElementById("esempio16").innerHTML = x + " Il suo valore rimane invariato perché nel blocco ho ridichiarato \"x\" con la parola let. Se avessi usato var, il suo valore sarebbe cambiato!" +
         "<br> Non posso dichiarare variabili con lo stesso nome ma parole chiavi diverse nello stesso blocco!";
 }
 
 function esempio17() {
     var i = 20;
     for (var i = 0; i < 10; i++) {}
-    document.getElementById("esempio17").innerHTML = i + " -- Usando la parola chiave \"var\" dentro ai cicli, se lo stesso nome era già stato usato, il valore finale sarà cambiato (i inizializzata a 0)!" +
+    document.getElementById("esempio17").innerHTML = i + " Usando la parola chiave \"var\" dentro ai cicli, se lo stesso nome era già stato usato, il valore finale sarà cambiato (i inizializzata a 0)!" +
         "<br> Usando la parola chiave \"let\" si risolve questo problema.";
 }
 
 function esempio18() {
     nome = "Giacomo";
-    document.getElementById("esempio18").innerHTML = nome + " -- Hoisting, posso usare le variabili prima di averle dichiarate solo se utilizzo la parola \"var\", altrimenti verrà lanciato un Reference Error!";
+    document.getElementById("esempio18").innerHTML = nome + " Hoisting, posso usare le variabili prima di averle dichiarate solo se utilizzo la parola \"var\", altrimenti verrà lanciato un Reference Error!";
     var nome;
 }
 
@@ -171,15 +171,19 @@ function esempio26() {
 function esempio27() {
     document.getElementById("esempio27").innerHTML = "Gli eventi sono cose che accadono agli elementi e JS ci aiuta a reagire a questi eventi"+
     "<br>Esempi comuni sono gli eventi generati dall'utente come onclick e onchange"+
-    "<br>Gli event handler possono essere utilizzati per gestire e verificare <br>l'input dell'utente, le azioni dell'utente e le azioni del browser:";
+    "<br>Gli event handler possono essere utilizzati per gestire e verificare <br>l'input dell'utente, le azioni dell'utente e le azioni del browser <br>"
+    +Date();
 }
 
 function esempio28() {
+    const s = new String("Ciao");
+    const sa = "Ciao";
     document.getElementById("esempio28").innerHTML = "Le stringhe sono composte da più caratteri scritti tra virgolette <br>e servono per memorizzare e manipolare il testo."
     +"<br>Le stringhe sono valori primitivi ma possono essere usate come oggetti attraverso new"+
     "<br>Se confrontiamo però due stringhe (una creata con new  e l'altra letteralmente)"+
     "<br>con l'operatore === avremo come output false perchè saranno di tipi diversi"+
-    "<br>Nelle stringhe abbiamo come carattere di uscita il \\ che trasforma i caratteri speciali in stringa";
+    "<br>Nelle stringhe abbiamo come carattere di uscita il \\ che trasforma i caratteri speciali in stringa"+
+    "<br> s = new String(\"Ciao\") != sa = \"Ciao\"";
 }
 
 function esempio29() {
